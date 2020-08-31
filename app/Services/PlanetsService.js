@@ -11,6 +11,8 @@ class PlanetsService {
         ProxyState.nextPlanet = res.data.next
         ProxyState.planets = res.data.results.map(p => new Planet(p))
         ProxyState.planets = ProxyState.planets.filter(p => p.climate == "temperate")
+        //NOTE mark suggested a recursive process where another api call would be made if there weren't ten results and filling an array
+        //TODO consider implementing
       })
       .catch(error => {
         console.error(error)
