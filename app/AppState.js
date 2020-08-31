@@ -1,5 +1,6 @@
 import Specie from "./Models/Specie.js"
 import Character from "./Models/Character.js"
+import Planet from "./Models/Planet.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
@@ -10,10 +11,17 @@ class AppState extends EventEmitter {
   nextSpecies = ''
   previousSpecies = ''
 
+  nextPlanet = ''
+
+  previousPlanet = ''
+
   /** @type { Character[] } */
   characters = []
-  /** @type { Specie[]} */
+  /** @type { Specie[] } */
   species = []
+
+  /** @type { Planet[] } */
+  planets = []
 
 
 }
