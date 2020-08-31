@@ -1,13 +1,19 @@
+import Specie from "./Models/Specie.js"
 import Character from "./Models/Character.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 // NOTE AppState is the object used to hold all the data from the app, this replaces _state = {}
 class AppState extends EventEmitter {
-  next = ''
-  previous = ''
+  nextCharacter = ''
+  previousCharacter = ''
+  nextSpecies = ''
+  previousSpecies = ''
+
   /** @type { Character[] } */
   characters = []
+  /** @type { Specie[]} */
+  species = []
 
 
 }
